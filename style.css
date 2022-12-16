@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*header section*/
+header{
+    width: 100%;
+    height: 90px;
+    background:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.4)), url(./images/background.jpg) center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 5px;
+}
+.header_title{
+    flex-basis: 40%;
+    position: fixed;
+    top: 2px;
+    left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+#navbar{
+    display: flex;
+    position: fixed;
+    left: 60%;
+    top: 0;
+    text-align: center;
+}
+#navbar a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.6s;
+}
+#navbar a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.2s;
+}
+#navbar a:hover::after{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 125px;
+    }
+    .header_title{
+        position: relative;
+        top: 50px;
+    }
+    #navbar{
+        top: 0;
+        left: 20%;
+    }
+}
+/*--end of header section--*/
+
+/*--welcome section--*/
+#welcome-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(150deg, rgba(102, 50, 16, 0.6), rgba(0, 0, 0,1));
+    box-shadow: 0px 2px 5px rgba(14, 13, 13, 0.8);
+    position: relative;
+    top: 5%;
+}
+#welcome-section h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    margin: 80px;
+}
+#welcome-section p{
+    font-size: 35px;
+    border: 1px solid;
+    padding: 10px;
+}
+@media screen and (max-width: 600px){
+    #welcome-section h1{
+        font-size: 5vw;
+    }
+    #welcome-section p{
+        font-size: 5vw;
+    }
+}
+
+/*Project section*/
+#projects{
+    position: relative;
+    top: 3%;
+    background: linear-gradient(150deg, rgba(102, 50, 16, 0.6), rgba(0, 0, 0,1));
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+#projects h1,p{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#projects h1{
+    margin-top: 50px;
+    padding: 20px 0px;
+    font-size: 30px;
+}
+#projects p{
+    font-size: 20px;
+    margin: 18px;
+    padding: 10px 0px;
+}
+.project-row{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+figure{
+    flex-basis: 30%;
+    height: 250px;
+    margin: 5px;
+}
+.project-tile img{
+    width: 100%;
+    height: 80%;
+}
+.project-row figcaption{
+    color: #fff;
+    margin: 5px;
+    text-align: justify;
+}
+.btn{
+    margin: 50px auto;
+    padding: 15px;
+    border: 1px solid #fff;
+    width: 320px;
+    height: 50px;
+    transition: ease;
+}
+.btn:hover{
+    border: 1px solid rgba(130, 131, 116,0.5);
+}
+.btn a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.btn a:hover{
+    color: rgba(130, 131, 116,0.5);
+}
+@media screen and (max-width: 600px){
+    #projects{
+        width: 100%;
+    }
+    #projects h1{
+        height: 90px;
+        position: relative;
+        top: 35px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+    figure{
+        display: flex;
+        flex-basis: 100%;
+        width: 120px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .project-tile img{
+        width: 24vh;
+    }
+    .project-tile figcaption{
+        text-align: center;
+        padding: 15px;
+        margin: auto;
+    }
+    .btn{
+        max-width: 250px;
+        margin-bottom: 30px;
+    }
+    .btn a{
+        font-size: 15px;
+    }
+}
+
+/*---end of Project section--*/
+
+/*about us section*/
+#aboutUs_section{
+    position: relative;
+    top: 0px;
+    background: linear-gradient(2000deg, rgba(102, 50, 16, 0.6), rgba(0, 0, 0,1));
+    text-align: center;
+    padding: 10px;
+}
+#aboutUs_section h1{
+    max-width: 340px;
+    height: 200px;
+    color: #fff;
+    font-size: 5vmax;
+    margin: 25px auto;
+    padding: 50px;
+}
+#aboutUs_section p{
+    font-style: italic;
+    font-size: 25px;
+    margin: 30px;
+}
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 30px;
+    font-size: 30px;
+
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a:hover{
+    color: rgba(130, 131, 116,0.5);
+}
+.fab{
+    font-size: 40px;
+    color: black;
+}
+@media screen and (max-width: 600px){
+    #aboutUs_section h1{
+        position: relative;
+        top: 30px;
+    }
+    .socials{
+        flex-direction: column;
+        margin: 20px;
+    }
+    .socials a{
+        padding: 10px;
+    }
+}
+/*--End of Socials Section--*/
+
+/*--Footer--*/
+footer{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: 0px;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.9) 35%, rgba(0, 0, 0,0.5) 65%);
+}
+.footer_text{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    font-size: 18px;
+}
+.footer_text p{
+    flex-basis: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+.fas{
+    font-size: 30px;
+    margin-left: 8px;
+}
+@media screen and (max-width: 600px){
+    footer{
+        height: 100%;
+    }
+    .footer_text{
+        flex-direction: column;
+        font-size: 20px;
+    }
+}
